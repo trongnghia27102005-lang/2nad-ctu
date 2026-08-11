@@ -1,0 +1,525 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  
+}
+/* header */
+header {
+  background-color: #181818;
+  font-family: "Open Sans", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+nav a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
+nav a {
+  font-size: clamp(18px, 1.8vw, 30px);
+}
+.active,
+nav a.active:hover {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+}
+.nav_left,
+.nav_right {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+  gap: 5px;
+}
+.nav_right button {
+  margin-left: 3px;
+  border: none;
+  font-size: 26px;
+  background-color: #181818;
+  border-radius: 50%;
+  color: white;
+}
+.nav_left a:hover,
+.nav_right a:hover {
+  background-color: rgba(255, 255, 255, 0.159);
+  border-radius: 5px;
+}
+#logo:hover {
+  background: none;
+}
+.nav_left > #logo {
+  padding: 0;
+}
+@media (max-width: 1000px) {
+  .nav_right span {
+    display: none;
+  }
+}
+.menu i {
+  font-size: 40px;
+  color: white;
+  display: none;
+  width: 50px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  #logo2NAD {
+    display: none;
+  }
+}
+@media (max-width: 720px) {
+  .Navbarmenu {
+    display: none;
+  }
+  .menu > .fa-bars {
+    display: block;
+  }
+  #hiddenNavbar:checked + .menu .fa-bars {
+    display: none;
+  }
+  #hiddenNavbar:checked + .menu .fa-xmark {
+    display: block;
+  }
+  .Navbarmenu {
+    display: none;
+    flex-direction: column;
+    background-color: #181818d8;
+    position: absolute;
+    top: 77px;
+    left: 0;
+    width: 150px;
+    padding: 10px;
+    z-index: 1000;
+  }
+  #hiddenNavbar:checked ~ .Navbarmenu {
+    display: flex;
+  }
+}
+.fullcenter {
+  border: 1px solid black;
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+  margin: 20px 0px;
+}
+.sphot{
+  background-color: #A00000;
+}
+.card-body{
+  display: flex;
+  flex-wrap: wrap;
+  height: 350px;
+}
+.h-100 > .card-body{
+  height: auto;
+}
+.card {
+  overflow: hidden;
+  cursor: pointer;
+}
+.card-img-top {
+  aspect-ratio: 1/1;
+  object-fit: fill;
+  transition: transform 0.3s ease;
+}
+.card:hover .card-img-top,
+.card:active .card-img-top {
+  transform: scale(1.05);
+}
+.menu,
+a:hover {
+  user-select: none;
+  cursor: pointer;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  padding: 10px;
+}
+h2{
+  font-style: italic;
+  font-weight: bold;
+  padding: 10px;
+}
+/* footer */
+footer {
+  background-color: #181818;
+}
+.footer-container {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+.footer-container a {
+  color: white;
+  text-decoration: none;
+}
+.footer_top {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 1.5;
+  gap: 20px;
+  padding: 60px 0px 30px 0px;
+}
+.footer_lienhe i {
+  font-size: 25px;
+  margin: 8px;
+}
+.footer_theodoi i {
+  font-size: 40px;
+  margin: 0px 15px;
+}
+.footer_bottom {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.vetrang {
+  position: fixed;
+  right: 15px;
+  bottom: 50px;
+  font-size: 65px;
+  z-index: 100;
+}
+.vetrang i {
+  color: black;
+}
+.vetrang:hover {
+  transform: scale(1.1);
+}
+
+/* Trang Chu */
+
+.banner {
+    background: url(../html/img/trangchu/HINHANH/banner3.png);
+    width: 100%;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .content {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Gabarito', sans-serif;
+}
+
+
+
+
+.banner .content div:nth-child(1) {
+    font-size: 5em;
+    font-weight: bold;
+
+}
+
+.banner .content div:nth-child(2) {
+    font-size: 20em;
+    font-weight: bold;
+
+}
+
+.banner .content div:nth-child(3) {
+    font-size: 20em;
+    font-style: italic;
+    font-weight: bold;
+    color: #eee7;
+}
+
+.banner .content div:nth-child(4) {
+    text-align: center;
+}
+
+.banner .content div button {
+    border: 1px solid rgba(81, 73, 61, 0.375);
+    background-color: transparent;
+    color: #eee;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+}
+
+.more {
+    text-decoration: none;
+    color: #eee7;
+}
+
+/* body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer"
+    ;
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+} */
+
+
+.section-one {
+    background: white;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+
+.section-one .inner {
+    display: flex;
+    padding: 40px;
+    background: #EFEFEF;
+    border-radius: 18px;
+}
+
+.section-one .inner_content {
+    flex: 1;
+}
+
+.section-one .inner_content .inner_h3 {
+    color: #FF3939;
+    margin-top: 10px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.section-one .inner_content .inner_a {
+    font-size: 30px;
+}
+
+.section-one .inner_content .inner_p {
+    font-style: italic;
+    font-size: 40px;
+}
+
+.section-one .inner_images {
+    width: 35%;
+    margin-left: 50px;
+    position: relative;
+}
+
+.section-one .inner_images img {
+    top: -40px;
+    right: -150px;
+    height: auto;
+    position: absolute;
+    margin-top: -200px;
+    animation: Right 5s ease-out forwards;
+
+}
+
+@keyframes Right {
+    from {
+        transform: translateX(200px) rotate(10deg);
+        
+    }
+
+    to {
+        transform: translateX(0) rotate(0deg);
+     
+    }
+}
+
+.section_two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.two {
+    display: flex;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+
+}
+
+.two .card {
+    width: 100%;
+    border-radius: 18px;
+    padding: 25px;
+    background: #EFEFEF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.two .card img {
+
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+
+.two .card h3 {
+    font-weight: 100%;
+    z-index: 1;
+}
+
+
+.two .card a{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.banner5{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    font-size: 36px;
+}
+
+.workout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+}
+
+.banner6{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    font-size: 36px;
+}
+
+.workout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner7{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    font-size: 36px;
+}
+.workout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+
+
+
+@media (max-width: 992px) {
+
+  .section-one .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-one .inner_images img {
+    width: 60%;
+  }
+
+  .two {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .banner5,
+  .banner6,
+  .banner7 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer_top {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-one .inner_images img {
+    width: 80%;
+  }
+  .two {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card img {
+    width: 80%;
+  }
+
+  footer .footer_top {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .banner .content div:nth-child(3) {
+    font-size: 30px !important;
+  }
+
+  .inner_h3 {
+    font-size: 20px;
+  }
+
+  .inner_p {
+    font-size: 16px;
+  }
+
+  .inner_images img {
+    width: 90%;
+  }
+
+  h1, h3 {
+    text-align: center;
+  }
+
+  .workout {
+    font-size: 30px;
+  }
+
+  .footer_bottom span {
+    font-size: 14px;
+  }
+}
+
+
+a {
+  position: relative;
+  z-index: 10;
+}
+
+
+
+
+
+
