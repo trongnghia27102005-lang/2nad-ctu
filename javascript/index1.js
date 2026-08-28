@@ -38,6 +38,7 @@ function DangKy(event) {
   window.location.href = "../html/dangnhap.html";
   return true;
 }
+
 function DangNhap(event) {
   event.preventDefault();
 
@@ -71,6 +72,7 @@ function DangNhap(event) {
   window.location.href = "trangchu.html";
   return true;
 }
+
 function KhoiPhucTaiKhoan(event) {
   event.preventDefault();
   let emailKPTK = document.getElementById("emailKPTK").value;
@@ -84,6 +86,7 @@ function KhoiPhucTaiKhoan(event) {
   window.location.href = "khoiphuctaikhoan1.html";
   return true;
 }
+
 function LienHe(event) {
   event.preventDefault();
 
@@ -100,27 +103,18 @@ function LienHe(event) {
   return true;
 }
 
-//SẢN PHẨM
-addToCart = function (name, price, image) {
+window.addToCart = function (name, price, image) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  let item = { name, price, image, qty: 1 };
-  cart.push(item);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Đã thêm " + name + " vào giỏ hàng!");
-};
+  let numericPrice = Number(price) || 0;
 
-function showPage(page) {
-  document
-    .querySelectorAll(".product-page")
-    .forEach((p) => (p.style.display = "none"));
-  document.getElementById("page" + page).style.display = "block";
-}
+  let existingIndex = cart.findIndex((item) => item.name === name);
 
-addToCart = function (name, price, image) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  0;
-  let item = { name, price, image, qty: 1 };
-  cart.push(item);
+  if (existingIndex !== -1) {
+    cart[existingIndex].qty += 1;
+  } else {
+    cart.push({ name, price: numericPrice, image, qty: 1 });
+  }
+
   localStorage.setItem("cart", JSON.stringify(cart));
   alert("Đã thêm " + name + " vào giỏ hàng!");
 };
@@ -128,86 +122,68 @@ addToCart = function (name, price, image) {
 function loadCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let tbl = document.getElementById("tblResult");
+  if (!tbl) return;
+
   tbl.innerHTML = `
-            <tr>
-                <th>Hình</th>
-                <th>Tên SP</th>
-                <th>Giá</th>
-                <th>Số lượng</th>
-                <th>Thành tiền</th>
-                <th>Chức năng</th>
-            </tr>
-             `;
-  let total = 0;
+    <tr>
+      <th>Hình</th><th>Tên SP</th><th>Giá</th><th>Số lượng</th><th>Thành tiền</th><th>Chức năng</th>
+    </tr>`;
+
   cart.forEach((item, index) => {
     let row = document.createElement("tr");
-    // HÌNH
-    let td = document.createElement("td");
-    td.innerHTML = `<img src="${item.image}" width="70" height="70" style="object-fit:cover;">`;
-    row.appendChild(td);
+    let price = Number(item.price) || 0;
+    let qty = Number(item.qty) || 0;
 
-    // TÊN
-    td = document.createElement("td");
-    td.innerHTML = item.name;
-    row.appendChild(td);
-
-    // GIÁ
-    td = document.createElement("td");
-    td.innerHTML = item.price.toLocaleString() + "đ";
-    row.appendChild(td);
-
-    // SỐ LƯỢNG
-    td = document.createElement("td");
-    td.innerHTML = item.qty;
-    row.appendChild(td);
-
-    // THÀNH TIỀN
-    let thanhTien = item.qty * item.price;
-    total += thanhTien;
-    td = document.createElement("td");
-    td.innerHTML = thanhTien.toLocaleString() + "đ";
-    row.appendChild(td);
-
-    // NÚT
-    td = document.createElement("td");
-    td.innerHTML = `
-                <button onclick="buyItem(${index})">Mua</button>
-                <button onclick="editItem(${index})">Sửa</button>
-                <button onclick="deleteItem(${index})">Xóa</button>
-            `;
-    row.appendChild(td);
-
+    row.innerHTML = `
+      <td><img src="${item.image}" width="50"></td>
+      <td>${item.name}</td>
+      <td>${price.toLocaleString("vi-VN")}đ</td>
+      <td>${qty}</td>
+      <td>${(price * qty).toLocaleString("vi-VN")}đ</td>
+      <td>
+        <button onclick="buyItem(${index})">Mua</button>
+        <button onclick="editItem(${index})">Sửa</button>
+        <button onclick="deleteItem(${index})">Xóa</button>
+      </td>
+    `;
     tbl.appendChild(row);
   });
-  // tổng tiền
-  let row = document.createElement("tr");
-  row.innerHTML = `
-            <td colspan="5"><b>Tổng thành tiền</b></td>
-            <td><b>${total.toLocaleString()}đ</b></td>
-        `;
-  tbl.appendChild(row);
+}
 
-  document.getElementById("total-money").innerHTML =
-    "Tổng tiền: <b>" + total.toLocaleString() + "đ</b>";
+function buyItem(index) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (cart[index]) {
+    alert("Bạn đã mua thành công: " + cart[index].name);
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+  }
 }
 
 function deleteItem(i) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.splice(i, 1);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  loadCart();
+  if (confirm("Bạn có chắc muốn xóa sản phẩm này?")) {
+    cart.splice(i, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+  }
 }
 
 function editItem(i) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let sl = prompt("Nhập số lượng mới:", cart[i].qty);
-  if (sl > 0) {
-    cart[i].qty = parseInt(sl);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    loadCart();
+
+  if (sl !== null) {
+    let newQty = parseInt(sl);
+    if (!isNaN(newQty) && newQty > 0) {
+      cart[i].qty = newQty;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    } else {
+      alert("Số lượng không hợp lệ!");
+    }
   }
 }
-function buyItem(i) {
-  alert("Bạn đã mua: " + JSON.parse(localStorage.getItem("cart"))[i].name);
-}
-loadCart();
+
+// Gọi hàm loadCart khi tải xong trang
+document.addEventListener("DOMContentLoaded", loadCart);
