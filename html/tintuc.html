@@ -1,590 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="icon" href="./img/favicon.ico" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
 
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <title>Tin Tức</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="icon" href="./img/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-  <body>
-    <header>
-      <nav>
-        <div class="nav_left">
-          <a id="logo" href="trangchu.html">
-            <img
-              src="./img/logo.png"
-              id="logo2NAD"
-              width="100"
-              height="100"
-              alt="Logo 2NAD"
-            />
-          </a>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <title>Tin Tức</title>
+</head>
 
-          <input type="checkbox" id="hiddenNavbar" hidden />
-          <label for="hiddenNavbar" class="menu">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark"></i>
-          </label>
+<body>
+  <header>
+    <nav>
+      <div class="nav_left">
+        <a id="logo" href="../trangchu.html">
+          <img src="./img/logo.png" id="logo2NAD" width="100" height="100" alt="Logo 2NAD" />
+        </a>
 
-          <div class="Navbarmenu">
-            <a href="trangchu.html">Trang Chủ</a>
-            <a href="sanpham.html">Sản Phẩm</a>
-            <a href="gioithieu.html">Giới Thiệu</a>
-            <a class="active" href="tintuc.html">Tin Tức</a>
-            <a href="lienhe.html">Liên Hệ</a>
-          </div>
+        <input type="checkbox" id="hiddenNavbar" hidden />
+        <label for="hiddenNavbar" class="menu">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+
+        <div class="Navbarmenu">
+          <a href="../trangchu.html">Trang Chủ</a>
+          <a href="sanpham.html">Sản Phẩm</a>
+          <a href="gioithieu.html">Giới Thiệu</a>
+          <a class="active" href="tintuc.html">Tin Tức</a>
+          <a href="lienhe.html">Liên Hệ</a>
         </div>
-        <div class="nav_right">
-          <a href="#">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </a>
-          <a href="dangnhap.html">
-            <i class="fa-solid fa-user"></i>
-            <span>Tài Khoản</span>
-          </a>
-          <a href="giohang.html">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>Giỏ Hàng</span>
-          </a>
-        </div>
-      </nav>
-    </header>
-    <main class="container">
-      <h1>TIN TỨC</h1>
-      <div class="news">
-        <div class="hotnews">
-          <h2>TIN NÓNG</h2>
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide carousel-fade"
-            data-bs-ride="carousel"
-            data-bs-interval="5000"
-          >
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active bg-dark"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                class="bg-dark"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                class="bg-dark"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
-            <div class="carousel-inner border rounded">
-              <div class="carousel-item active">
-                <div class="row text-start position-relative">
-                  <div class="col-md-6 mb-md-0 p-md-4">
-                    <img
-                      src="./img/tintuc/hotnews1.png"
-                      class="w-100"
-                      alt=".Air Jordan 3 Winterized Archaeo Brown"
-                    />
-                  </div>
-                  <div class="col-md-6 p-4 ps-md-0">
-                    <h5 class="mt-0">Air Jordan 3 Winterized Archaeo Brown</h5>
-                    <span>
-                      Air Jordan 3, do Tinker Hatfield thiết kế vào năm 1988, là
-                      biểu tượng kinh điển của Jordan Brand. Phiên bản 2025 mang
-                      phối màu be, nâu và tím cùng chất liệu bền bỉ, là lựa chọn
-                      lý tưởng cho mùa đông. Với thiết kế tinh tế và phong cách
-                      vượt thời gian, đôi giày này chắc chắn sẽ thu hút mọi ánh
-                      nhìn.
-                    </span>
-                    <a href="sorry.html" class="stretched-link">Xem Thêm</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row text-start position-relative">
-                  <div class="col-md-6 mb-md-0 p-md-4">
-                    <img
-                      src="./img/tintuc/hotnews2.png"
-                      class="w-100"
-                      alt="Barriers x Converse Pro Leather High"
-                    />
-                  </div>
-                  <div class="col-md-6 p-4 ps-md-0">
-                    <h5 class="mt-0">Barriers x Converse Pro Leather High</h5>
-                    <span>
-                      Nếu bạn tìm kiếm đôi Converse nổi bật năm nay, Barriers
-                      Pro Leather cao cổ là lựa chọn đáng chú ý. Làm từ da lộn
-                      nâu với dây vàng nổi bật, phối màu gợi hình ảnh lá rụng
-                      mùa thu. Thiết kế lấy cảm hứng từ tờ The North Star thế kỷ
-                      19, thể hiện tinh thần tự do và giáo dục qua thời trang
-                      của Barriers.
-                    </span>
-                    <a href="#" class="stretched-link">Xem Thêm</a>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row text-start position-relative">
-                  <div class="col-md-6 mb-md-0 p-md-4">
-                    <img
-                      src="./img/tintuc/hotnews3.png"
-                      class="w-100"
-                      alt="Reebok Club C Revenge “Chalk Semi Orange Flare”"
-                    />
-                  </div>
-                  <div class="col-md-6 p-4 ps-md-0">
-                    <h5 class="mt-0">
-                      Reebok Club C Revenge “Chalk Semi Orange Flare”
-                    </h5>
-                    <span>
-                      Reebok giữ thiết kế tối giản với tông trắng phấn và cam
-                      nhạt cho đôi Club C Revenge. Mang phong cách quần vợt thập
-                      niên 80, mẫu giày này là lựa chọn cổ điển dưới 100 USD,
-                      hoàn hảo để làm mới tủ đồ mùa thu theo xu hướng vintage.
-                    </span>
-                    <a href="#" class="stretched-link">Xem Thêm</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="nav_right">
+        <a href="#">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="dangnhap.html">
+          <i class="fa-solid fa-user"></i>
+          <span>Tài Khoản</span>
+        </a>
+        <a href="giohang.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Giỏ Hàng</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>TIN TỨC</h1>
+    <div class="news">
+      <div class="hotnews">
+        <h2>TIN NÓNG</h2>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+          data-bs-interval="5000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+              class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" class="bg-dark" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" class="bg-dark" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
           </div>
-        </div>
-        <div class="allnews">
-          <h2>BẢN TIN</h2>
-          <div class="row row-cols-1 row-cols-md-4 g-3 mb-3">
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc1.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Hàng Outlet là gì? - Hiểu đúng về khái niệm này thế nào?
-                  </h5>
-                  <p class="card-text">
-                    Hàng Outlet đã trở thành một khái niệm vô cùng quen thuộc
-                    đối với các tín đồ thời trang. Tuy nhiên nhiều ...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
+          <div class="carousel-inner border rounded">
+            <div class="carousel-item active">
+              <div class="row text-start position-relative">
+                <div class="col-md-6 mb-md-0 p-md-4">
+                  <img src="./img/tintuc/hotnews1.png" class="w-100" alt=".Air Jordan 3 Winterized Archaeo Brown" />
                 </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">1 tiếng trước</small>
+                <div class="col-md-6 p-4 ps-md-0">
+                  <h5 class="mt-0">Air Jordan 3 Winterized Archaeo Brown</h5>
+                  <span>
+                    Air Jordan 3, do Tinker Hatfield thiết kế vào năm 1988, là
+                    biểu tượng kinh điển của Jordan Brand. Phiên bản 2025 mang
+                    phối màu be, nâu và tím cùng chất liệu bền bỉ, là lựa chọn
+                    lý tưởng cho mùa đông. Với thiết kế tinh tế và phong cách
+                    vượt thời gian, đôi giày này chắc chắn sẽ thu hút mọi ánh
+                    nhìn.
+                  </span>
+                  <a href="sorry.html" class="stretched-link">Xem Thêm</a>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc2.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Giày Lightning và Những Thương Hiệu Cầu Lông
-                  </h5>
-                  <p class="card-text">
-                    Giày là một trong những phụ kiện không thể thiếu trong môn
-                    cầu lông, bởi chúng không chỉ giúp người chơi ...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
+            <div class="carousel-item">
+              <div class="row text-start position-relative">
+                <div class="col-md-6 mb-md-0 p-md-4">
+                  <img src="./img/tintuc/hotnews2.png" class="w-100" alt="Barriers x Converse Pro Leather High" />
                 </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">9 tiếng trước</small>
+                <div class="col-md-6 p-4 ps-md-0">
+                  <h5 class="mt-0">Barriers x Converse Pro Leather High</h5>
+                  <span>
+                    Nếu bạn tìm kiếm đôi Converse nổi bật năm nay, Barriers
+                    Pro Leather cao cổ là lựa chọn đáng chú ý. Làm từ da lộn
+                    nâu với dây vàng nổi bật, phối màu gợi hình ảnh lá rụng
+                    mùa thu. Thiết kế lấy cảm hứng từ tờ The North Star thế kỷ
+                    19, thể hiện tinh thần tự do và giáo dục qua thời trang
+                    của Barriers.
+                  </span>
+                  <a href="#" class="stretched-link">Xem Thêm</a>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc3.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Mùa mưa bảo quản giày sao cho chuẩn
+            <div class="carousel-item">
+              <div class="row text-start position-relative">
+                <div class="col-md-6 mb-md-0 p-md-4">
+                  <img src="./img/tintuc/hotnews3.png" class="w-100"
+                    alt="Reebok Club C Revenge “Chalk Semi Orange Flare”" />
+                </div>
+                <div class="col-md-6 p-4 ps-md-0">
+                  <h5 class="mt-0">
+                    Reebok Club C Revenge “Chalk Semi Orange Flare”
                   </h5>
-                  <p class="card-text">
-                    Nắng mưa là việc của trời còn việc của các sneakerhead vẫn
-                    là diện những đôi sneaker theo ý thích của mình.
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">15 tiếng trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc4.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Người chơi thể thao có nên giặt giày thường xuyên?
-                  </h5>
-                  <p class="card-text">
-                    Giày thể thao bị dính bẩn, có mùi hôi khó chịu là vấn đề
-                    thường gặp với những ai thường xuyên sử dụng ...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">1 ngày trước</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-cols-1 row-cols-md-4 g-3 mb-3">
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc5.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Cách chọn size giày Adidas và Nike chính xác nhất
-                  </h5>
-                  <p class="card-text">
-                    Việc đi giày không vừa chân (quá rộng hoặc quá chật) mang
-                    đến nhiều bất tiện và ảnh hưởng đến sức khỏe của ...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">2 ngày trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc6.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Tại Sao Giày Nike, Adidas, Puma Chính Hãng Lại Đắt?
-                  </h5>
-                  <p class="card-text">
-                    Mua một đôi giày được quảng cáo là chính hãng, nhà bán hàng
-                    nói là được vận chuyển từ Mỹ, Nhật, Hàn, Anh,…
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">5 ngày trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc7.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Top Dung Dịch Vệ Sinh Giày Được Khuyên Dùng
-                  </h5>
-                  <p class="card-text">
-                    Dung dịch vệ sinh giày được những sneakerhead cực kỳ quan
-                    tâm bởi họ luôn muốn tự tay chăm chút cho ...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">1 tuần trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc8.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Thế giới anime/manga được đưa vào những đôi sneaker
-                  </h5>
-                  <p class="card-text">
-                    Sneaker đang ngày càng trở nên phổ biến và dần trở thành
-                    item không thể thiếu trong tủ giày của bất cứ ai. Ng...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">2 tuần trước</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-cols-1 row-cols-md-4 g-3 mb-3">
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc9.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Thành công đến từ Công nghệ đế lót CAO CẤP – ĐỘC QUYỀN
-                  </h5>
-                  <p class="card-text">
-                    Những thương hiệu giày lớn trên thế giới được yêu thích
-                    không chỉ bởi những thiết kế độc đáo, cuốn hút, ma...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">2 tuần trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc10.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    10 thương hiệu giày thể thao nổi tiếng và hot nhất hiện nay
-                  </h5>
-                  <p class="card-text">
-                    Với độ phủ sóng rộng khắp ở mọi nơi, những thương hiệu giày
-                    như đang khẳng định vị thế của mình trong là...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">3 tuần trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc11.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Sức hút của những đôi giày cổ điển Adidas x Blackpink.
-                  </h5>
-                  <p class="card-text">
-                    Dạo gần đây, Adidas cho ra mắt mẫu giày Adidas Supercourt
-                    kết hợp với Blackpink khiến những tín đồ thời tra...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">4 tuần trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc12.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Tổng Hợp Alphabounce Mà Có Thể Bạn Chưa Biết
-                  </h5>
-                  <p class="card-text">
-                    Alphabounce là một trong những đôi giày training ấn tượng
-                    của nhà Adidas. Đôi giày được chú ý bởi chất lượng v...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">1 tháng trước</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row row-cols-1 row-cols-md-4 g-3 mb-3">
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc13.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Khác biệt giữa Ultra Boost và Pure Boost trong bộ sưu tập
-                  </h5>
-                  <p class="card-text">
-                    Ultra boost và Pure boost là hai trong số những dòng giày
-                    của Adidas được yêu thích nhất hiện nay. Mặc dù thiết ...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">1 tháng trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc14.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Câu chuyện giữa các brand giày nổi tiếng thế giới
-                  </h5>
-                  <p class="card-text">
-                    Câu chuyện giữa những brand giày nổi tiếng thế giới không
-                    chỉ bắt đầu và kết thúc trong một sớm một chiều mà ...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">2 tháng trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc15.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    3 mẫu logo Adidas không phải ai cũng biết
-                  </h5>
-                  <p class="card-text">
-                    Là một trong những thương hiệu sản xuất giày nổi tiếng nhất
-                    thế giới, Adidas không chỉ được biết trong giớ...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">2 tháng trước</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img
-                  src="./img/tintuc/tintuc16.png"
-                  height="200"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Những lý do bạn nên đưa giày đi Spa
-                  </h5>
-                  <p class="card-text">
-                    Tại Việt Nam việc đưa giày đi spa không còn là việc quá xa
-                    lạ. Spa giày được mở ra như một sự “cứu cánh” ch...
-                  </p>
-                  <a href="sorry.html" class="stretched-link"></a>
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">3 tháng trước</small>
+                  <span>
+                    Reebok giữ thiết kế tối giản với tông trắng phấn và cam
+                    nhạt cho đôi Club C Revenge. Mang phong cách quần vợt thập
+                    niên 80, mẫu giày này là lựa chọn cổ điển dưới 100 USD,
+                    hoàn hảo để làm mới tủ đồ mùa thu theo xu hướng vintage.
+                  </span>
+                  <a href="#" class="stretched-link">Xem Thêm</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <div class="footer_top">
-          <div class="footer_lienhe">
-            <a href="lienhe.html">
-              <h3>Liên Hệ</h3>
-            </a>
-            <a href="sorry.html">
-              <i class="fa-solid fa-location-dot"></i>
-              Khu II, đường 3/2, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ
-              <br />
-              <i class="fa-solid fa-envelope"></i>
-              2nad@gmail.com.vn
-              <br />
-              <i class="fa-solid fa-phone"></i>
-              0900 000 000</a
-            >
+      <div class="allnews">
+        <h2>BẢN TIN</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-3 mb-3">
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc1.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Hàng Outlet là gì? - Hiểu đúng về khái niệm này thế nào?
+                </h5>
+                <p class="card-text">
+                  Hàng Outlet đã trở thành một khái niệm vô cùng quen thuộc
+                  đối với các tín đồ thời trang. Tuy nhiên nhiều ...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">1 tiếng trước</small>
+              </div>
+            </div>
           </div>
-          <div class="footer_chinhsach">
-            <h3>Chính Sách</h3>
-            <ul>
-              <li>Bảo mật thông tin</li>
-              <li>Đổi trả</li>
-              <li>Khiếu nại</li>
-              <li>Bảo hành</li>
-            </ul>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc2.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Giày Lightning và Những Thương Hiệu Cầu Lông
+                </h5>
+                <p class="card-text">
+                  Giày là một trong những phụ kiện không thể thiếu trong môn
+                  cầu lông, bởi chúng không chỉ giúp người chơi ...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">9 tiếng trước</small>
+              </div>
+            </div>
           </div>
-          <div class="footer_theodoi">
-            <h3>Theo Dõi Chúng Tôi</h3>
-            <a href="sorry.html">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-twitter"></i>
-            </a>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc3.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Mùa mưa bảo quản giày sao cho chuẩn
+                </h5>
+                <p class="card-text">
+                  Nắng mưa là việc của trời còn việc của các sneakerhead vẫn
+                  là diện những đôi sneaker theo ý thích của mình.
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">15 tiếng trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc4.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Người chơi thể thao có nên giặt giày thường xuyên?
+                </h5>
+                <p class="card-text">
+                  Giày thể thao bị dính bẩn, có mùi hôi khó chịu là vấn đề
+                  thường gặp với những ai thường xuyên sử dụng ...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">1 ngày trước</small>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="footer_bottom">
-          <span>&copy; 2025 Bản quyền thuộc về 2NAD.</span>
+        <div class="row row-cols-1 row-cols-md-4 g-3 mb-3">
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc5.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Cách chọn size giày Adidas và Nike chính xác nhất
+                </h5>
+                <p class="card-text">
+                  Việc đi giày không vừa chân (quá rộng hoặc quá chật) mang
+                  đến nhiều bất tiện và ảnh hưởng đến sức khỏe của ...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">2 ngày trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc6.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Tại Sao Giày Nike, Adidas, Puma Chính Hãng Lại Đắt?
+                </h5>
+                <p class="card-text">
+                  Mua một đôi giày được quảng cáo là chính hãng, nhà bán hàng
+                  nói là được vận chuyển từ Mỹ, Nhật, Hàn, Anh,…
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">5 ngày trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc7.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Top Dung Dịch Vệ Sinh Giày Được Khuyên Dùng
+                </h5>
+                <p class="card-text">
+                  Dung dịch vệ sinh giày được những sneakerhead cực kỳ quan
+                  tâm bởi họ luôn muốn tự tay chăm chút cho ...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">1 tuần trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc8.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Thế giới anime/manga được đưa vào những đôi sneaker
+                </h5>
+                <p class="card-text">
+                  Sneaker đang ngày càng trở nên phổ biến và dần trở thành
+                  item không thể thiếu trong tủ giày của bất cứ ai. Ng...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">2 tuần trước</small>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="vetrang">
-          <a href="#">
-            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        <div class="row row-cols-1 row-cols-md-4 g-3 mb-3">
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc9.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Thành công đến từ Công nghệ đế lót CAO CẤP – ĐỘC QUYỀN
+                </h5>
+                <p class="card-text">
+                  Những thương hiệu giày lớn trên thế giới được yêu thích
+                  không chỉ bởi những thiết kế độc đáo, cuốn hút, ma...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">2 tuần trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc10.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  10 thương hiệu giày thể thao nổi tiếng và hot nhất hiện nay
+                </h5>
+                <p class="card-text">
+                  Với độ phủ sóng rộng khắp ở mọi nơi, những thương hiệu giày
+                  như đang khẳng định vị thế của mình trong là...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">3 tuần trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc11.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Sức hút của những đôi giày cổ điển Adidas x Blackpink.
+                </h5>
+                <p class="card-text">
+                  Dạo gần đây, Adidas cho ra mắt mẫu giày Adidas Supercourt
+                  kết hợp với Blackpink khiến những tín đồ thời tra...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">4 tuần trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc12.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Tổng Hợp Alphabounce Mà Có Thể Bạn Chưa Biết
+                </h5>
+                <p class="card-text">
+                  Alphabounce là một trong những đôi giày training ấn tượng
+                  của nhà Adidas. Đôi giày được chú ý bởi chất lượng v...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">1 tháng trước</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-3 mb-3">
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc13.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Khác biệt giữa Ultra Boost và Pure Boost trong bộ sưu tập
+                </h5>
+                <p class="card-text">
+                  Ultra boost và Pure boost là hai trong số những dòng giày
+                  của Adidas được yêu thích nhất hiện nay. Mặc dù thiết ...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">1 tháng trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc14.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Câu chuyện giữa các brand giày nổi tiếng thế giới
+                </h5>
+                <p class="card-text">
+                  Câu chuyện giữa những brand giày nổi tiếng thế giới không
+                  chỉ bắt đầu và kết thúc trong một sớm một chiều mà ...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">2 tháng trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc15.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  3 mẫu logo Adidas không phải ai cũng biết
+                </h5>
+                <p class="card-text">
+                  Là một trong những thương hiệu sản xuất giày nổi tiếng nhất
+                  thế giới, Adidas không chỉ được biết trong giớ...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">2 tháng trước</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./img/tintuc/tintuc16.png" height="200" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Những lý do bạn nên đưa giày đi Spa
+                </h5>
+                <p class="card-text">
+                  Tại Việt Nam việc đưa giày đi spa không còn là việc quá xa
+                  lạ. Spa giày được mở ra như một sự “cứu cánh” ch...
+                </p>
+                <a href="sorry.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer">
+                <small class="text-body-secondary">3 tháng trước</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer_top">
+        <div class="footer_lienhe">
+          <a href="lienhe.html">
+            <h3>Liên Hệ</h3>
+          </a>
+          <a href="sorry.html">
+            <i class="fa-solid fa-location-dot"></i>
+            Khu II, đường 3/2, P. Xuân Khánh, Q. Ninh Kiều, TP. Cần Thơ
+            <br />
+            <i class="fa-solid fa-envelope"></i>
+            2nad@gmail.com.vn
+            <br />
+            <i class="fa-solid fa-phone"></i>
+            0900 000 000</a>
+        </div>
+        <div class="footer_chinhsach">
+          <h3>Chính Sách</h3>
+          <ul>
+            <li>Bảo mật thông tin</li>
+            <li>Đổi trả</li>
+            <li>Khiếu nại</li>
+            <li>Bảo hành</li>
+          </ul>
+        </div>
+        <div class="footer_theodoi">
+          <h3>Theo Dõi Chúng Tôi</h3>
+          <a href="sorry.html">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
           </a>
         </div>
       </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <div class="footer_bottom">
+        <span>&copy; 2025 Bản quyền thuộc về 2NAD.</span>
+      </div>
+      <div class="vetrang">
+        <a href="#">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
